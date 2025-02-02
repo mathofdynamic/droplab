@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'SF Pro Text Bold';
+    src: url('/static/SF-Pro-Text-Bold.otf');
+}
+
+@font-face {
+    font-family: 'SF Pro Text Medium';
+    src: url('/static/SF-Pro-Text-Medium.otf');
+}
+
+body {
+    font-family: 'SF Pro Text Medium', sans-serif;
+    background-color: rgba(5, 5, 5, 1);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(10, 10, 10, 1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.title {
+    font-family: 'SF Pro Text Bold', sans-serif;
+}
+
+.separator {
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+.result {
+    font-family: 'SF Pro Text Bold', sans-serif;
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 1);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(5px);
+        opacity: 0;
+        filter: blur(10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+input, select, button {
+    font-family: 'SF Pro Text Medium', sans-serif;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+input, select {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: rgba(25, 25, 25, 1);
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(35, 35, 35, 1);
+}

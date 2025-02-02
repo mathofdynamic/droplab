@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Title Rewriter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">AI Title Rewriter</h1>
+        <form onsubmit="event.preventDefault(); rewriteTitle();">
+            <input type="text" id="title" name="title" placeholder="Enter the product title here" required>
+            <br><br>
+            <label for="tone">Select Tone:</label>
+            <select id="tone" name="tone">
+                <option value="Casual">Casual</option>
+                <option value="Professional">Professional</option>
+                <option value="Friendly">Friendly</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Luxury">Luxury</option>
+                <option value="Tech-Savvy">Tech-Savvy</option>
+            </select>
+            <br><br>
+            <button type="button" onclick="rewriteTitle()">Rewrite Title</button>
+        </form>
+        <div class="separator"></div>
+        <div id="result" class="result">Your title appears here</div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
